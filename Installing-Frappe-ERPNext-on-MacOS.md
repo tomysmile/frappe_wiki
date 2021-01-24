@@ -40,7 +40,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
 ```
 brew install git node redis mariadb postgres
-brew cask install Caskroom/cask/wkhtmltopdf
+brew install --cask Caskroom/cask/wkhtmltopdf
 pip install virtualenvwrapper
 npm install -g yarn
 ```
