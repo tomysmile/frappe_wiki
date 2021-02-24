@@ -95,8 +95,7 @@ cd frappe
 ```
 
 ```
-git clone https://github.com/frappe/bench bench-repo
-pip install -e bench-repo
+pip install frappe-bench
 ```
 
 Create your first bench
