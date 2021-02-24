@@ -1,3 +1,6 @@
+Please follow updated guide here: [https://frappeframework.com/docs/user/en/installation#macos](https://frappeframework.com/docs/user/en/installation#macos)
+---
+
 Installation on Mac has become a lot more stable since the PPC days, mostly due to the increased stability of the underlying platforms. Usually takes an hour to get it right:
 
 #### Install Xcode Select
