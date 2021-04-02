@@ -93,7 +93,7 @@ Example: say your app name is `myapp`, add this to `api.py`
 ```python
 @frappe.whitelist()
 def get_last_project():
-	return frappe.get_all("Project", limit_page_lenght = 1)[0]
+	return frappe.get_all("Project", limit_page_length = 1)[0]
 ```
 
 This will be accessible as `/api/method/myapp.api.get_last_project`. You can call it from js like this:
