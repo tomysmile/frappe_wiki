@@ -7,10 +7,10 @@ This page is intended to make it easier for users who maintain custom apps / for
 
 If you were accessing any document method using one of the following constructs, the method will need to be whitelisted in the relevant class.
 
-- ```
+- ```js
   frm.call("method_name")
   ```
-- ```
+- ```js
   frappe.call({
       doc: ...,
       method: "method_name"
