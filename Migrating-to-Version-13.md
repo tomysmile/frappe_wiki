@@ -3,18 +3,24 @@ This page is intended to make it easier for users who maintain custom apps / for
 ---
 
 
-### Whitelisting for `Document` methods
+### Whitelisting `Document` methods
 
-If you were accessing any document method using one of the following constructs, the method will need to be whitelisted in the relevant class.
+If you were accessing any document methods using one of the following constructs, the method needs to be whitelisted in the doctype class.
 
-- ```js
-  frm.call("method_name")
-  ```
-- ```js
-  frappe.call({
-      doc: ...,
-      method: "method_name"
-  })
-  ```
+```js
+frm.call("my_method")
+// or
+frappe.call({
+    doc: frm.doc,
+    method: "my_method"
+})
+```
+
+```diff
+class ToDo:
++   frappe.whitelist()
+    def my_method(self):
+        pass
+```
 
 Docs: https://frappeframework.com/docs/user/en/api/form#frmcall
