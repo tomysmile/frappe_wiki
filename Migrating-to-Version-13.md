@@ -24,3 +24,36 @@ class ToDo:
 ```
 
 Docs: https://frappeframework.com/docs/user/en/api/form#frmcall
+
+### Replace `jenv` hook with `jinja`
+
+
+
+1. Open hooks.py
+1. Rename the `jenv` hook to `jinja`
+2. For each string in the `methods` list remove the part before `:` (colon) including the colon. It should only be a list of method paths.
+3. Repeat the same for strings in `filters`.
+
+For e.g.,
+```diff
+- jenv = {
++ jinja = {
+    "methods": [
+-        "get_fullname:custom_app.jinja.get_fullname"
++        "custom_app.jinja.get_fullname"
+    ],
+    "filters": [
+-        "format_currency:custom_app.jinja.currency_filter"
++        "custom_app.jinja.format_currency"
+    ]
+}
+```
+
+custom_app/jinja.py
+```diff
+- def currency_filter():
++ def format_currency():
+	...
+```
+
+Docs: https://frappeframework.com/docs/user/en/python-api/hooks#jinja-customization
