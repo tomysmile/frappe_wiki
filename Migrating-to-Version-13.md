@@ -5,7 +5,7 @@ This page is intended to make it easier for users who maintain custom apps / for
 
 ### Whitelisting `Document` methods
 
-If you were accessing any document methods using one of the following constructs, the method needs to be whitelisted in the doctype class.
+If you were accessing any document methods using one of the following constructs, the method needs to be whitelisted in the doctype class. Additionally, if you were calling methods in the `options` of `Button` fields, those will need to be whitelisted as well.
 
 ```js
 frm.call("my_method")
