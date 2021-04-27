@@ -29,7 +29,7 @@ We are following the below schedules for current releases.
 <pre>
 <b>Version 11</b>          3rd Wednesday of every 2 months
 <b>Version 12</b>          3rd Thursday of every 2 months
-<b>Version 13 Beta</b>     3rd Thursday of every month
+<b>Version 13</b>          3rd Thursday of every month
 </pre>
 
 **Note:** Fixes for critical issues will be released out of the schedule. 
