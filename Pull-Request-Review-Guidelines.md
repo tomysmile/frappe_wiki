@@ -1,7 +1,7 @@
 [WIP]
 
 ## Pull Request Review Guidelines
-Guidelines for anyone trying to pull requests for Frappe Framework.
+Guidelines for anyone trying to review pull requests for Frappe Framework.
 
 ### Pull Request information
 It is very important for a reviewer & author to make sure that the submitted pull request has enough information about the change they are trying to make via the pull request while they have the complete context of the change. This information can be used by other reviewers, contributors, and the QA team. It is also useful when someone wants to know why a specific change was done.
