@@ -1,5 +1,3 @@
-[WIP]
-
 ## Pull Request Review Guidelines
 Guidelines for anyone trying to review pull requests for Frappe Framework.
 
@@ -8,7 +6,7 @@ It is very important for a reviewer & author to make sure that the submitted pul
 A pull request should have the following information so that it can be useful for others.
 - Detailed rationale of why the change is required.
 - In case of a bug fix 
-   - Error Traceback in textual format (instead of an image) is helpful in that it can be searched by other users facing the same problem
+   - Error traceback in textual format (instead of an image) so that it can be searched by other users facing the same problem
    - Link of the pull request that might have introduced the bug
 - In case of UI related issue
    - An animated GIF or before/after screenshots so that others can quickly get the context for the change.
