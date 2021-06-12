@@ -165,7 +165,7 @@ sudo service mysql restart
 sudo apt-get install redis-server
 ```
 
-- To install Node.js 12.X package on your Linux OS, simply:
+- To install Node.js 14.X package on your Linux OS, simply:
 
 ```bash
 sudo apt-get install curl
