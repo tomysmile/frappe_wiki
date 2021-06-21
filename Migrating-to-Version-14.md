@@ -109,9 +109,9 @@ bench build --app my_app
 
 Finally, you can delete the `build.json` file, you no longer need it.
 
-### Website Routing and Rendering refactor
+### Website routing and rendering refactor
 
-There [was a major refractor](https://github.com/frappe/frappe/pull/12334) done for website routing and rendering. During this refactor few methods were moved to different files. You might have to change the following code in your custom app.
+There was [a major refractor](https://github.com/frappe/frappe/pull/12334) done for website routing and rendering. During this refactor, few methods were moved to different files. You might have to change the following code in your custom app.
 
 ```diff
 - from frappe.website.render import render
