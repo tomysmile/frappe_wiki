@@ -459,10 +459,11 @@ You can now access your site at your server's IP address.
 
 **NOTE:** If you're attempting to revise this page after successfully installing and running frappe, kindly add the required details in the following format only.
 
-    ** If you get stuck on "Updating Website" front end, use: 
+** If you get stuck on "Updating Website" front end, use: 
 ```bash
 bench set-config maintenance_mode 0
 ```
+
 
 | Name             | Version                              | By                                                                                                                                                                                                                                                                                          |
 | ---------------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
