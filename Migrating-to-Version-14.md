@@ -200,6 +200,10 @@ Also need to add the content on the page which is rendered based on json array w
 ```
 {\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}
 ```
+**Chart:**
+```
+{\"type\": \"chart\", \"data\": {\"chart_name\": \"Profit and Loss\", \"col\": 12}}
+```
 **Shortcut:** _shortcut_name_ is the label of shortcuts.
 ``` 
 {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"System Settings\", \"col\": 4}}
@@ -208,11 +212,15 @@ Also need to add the content on the page which is rendered based on json array w
 ```
 {\"type\": \"card\", \"data\": {\"card_name\": \"Data\", \"col\": 4}}
 ```
+**On-Boarding:**
+```
+{\"type\": \"onboarding\", \"data\": {\"onboarding_name\":\"Accounts\", \"col\": 12}}
+```
 **Spacer:** It is used to add gap between Shortcuts and Cards.
 ```
 {\"type\": \"spacer\", \"data\": {\"col\": 12}}
 ```
-Combine this based on shortcuts and links in the page to get the content as shown below.
+Combine this based on onboarding, charts, shortcuts, or links in the page to get the content as shown below.
 
 ```diff
 +  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"DocType\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Workspace\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Report\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Elements\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Modules\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Models\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Views\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Scripting\", \"col\": 4}}]",
