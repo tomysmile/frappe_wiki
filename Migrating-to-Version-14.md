@@ -189,7 +189,9 @@ if you have links update each links in following way:
   "link_type": "DocType",
   "onboard": 0,
   "type": "Link"
- }]
+ },
+ ...
+]
 ```
 
 Also need to add the content on the page which is rendered based on json array which we can create using below content.
