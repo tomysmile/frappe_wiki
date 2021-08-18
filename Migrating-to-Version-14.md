@@ -153,7 +153,6 @@ If you have any such JSON files in your Custom App you might have to do the foll
 - "developer_mode_only": 0,
 - "disable_user_customization": 0,
 - "extends_another_page": 0,
-- "hide_custom": 0,
 - "pin_to_bottom": 0,
 - "pin_to_top": 0,
 
