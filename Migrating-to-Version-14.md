@@ -158,7 +158,6 @@ If you have any such JSON files in your Custom App you might have to do the foll
 
 + "extends": "",
 + "for_user": "",
-+ "is_default": 0,
 + "parent_page": "",
 + "public": 1,
 + "restrict_to_domain": "",
