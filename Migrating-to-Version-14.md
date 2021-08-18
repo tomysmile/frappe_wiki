@@ -156,7 +156,6 @@ If you have any such JSON files in your Custom App you might have to do the foll
 - "pin_to_bottom": 0,
 - "pin_to_top": 0,
 
-+ "extends": "",
 + "for_user": "",
 + "parent_page": "",
 + "public": 1,
