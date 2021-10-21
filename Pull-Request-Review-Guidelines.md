@@ -24,3 +24,4 @@ For a pull request to be accepted a reviewer should validate whether coding stan
 - Tests are added to avoid possible failures in the future mostly during other code changes and refactors
 - Documentation added or updated accordingly based on the change made (if applicable)
 - Once the PR has been reviewed and approved, ensure it is backported to older versions (if applicable)
+- Make sure to merge any auto-generated backport PR once it has been validated for any compatibility issues
