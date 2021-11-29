@@ -12,7 +12,10 @@
 ### Table of Contents
 * [Installation](#installation)
 * [API Reference](https://frappeframework.com/docs/user/en/api)
+* [Release Schedule](#release-schedule)
+* [Migration Guide](#migration-guide)
 * [Support](#support)
+
 
 #### Installation
 
@@ -22,7 +25,7 @@ To install frappe right from scratch, check out our exhaustive guides:
 * [[The Hitchhiker's Guide to Installing Frappe on Windows OS]] (Windows Subsystem for Linux)
 * [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]] (deprecated)
 
-### Release Schedule
+#### Release Schedule
 
 We are following the below schedules for current releases.
 
@@ -38,6 +41,13 @@ The **pre-release** branch will be made 10 days before the release date for
 each version and testing will be done on that pre-release branch. 
 Any fixes based on testing should go into both
 pre-release and hotfix/develop branches via separate pull requests.
+
+#### Migration Guide
+
+This involves changes you'd have to make in your Frappe Apps to make them compatible with the latest releases of Frappe.
+
+* [[Migrating to Version 13]]
+* [[Migrating to Version 14]]
 
 #### Support
 * [Discuss](https://discuss.frappe.io)
