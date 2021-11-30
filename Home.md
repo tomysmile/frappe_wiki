@@ -11,6 +11,7 @@
 
 ### Table of Contents
 * [Installation](#installation)
+* [Contribution Guidelines](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
 * [API Reference](https://frappeframework.com/docs/user/en/api)
 * [Release Schedule](#release-schedule)
 * [Migration Guide](#migration-guide)
@@ -50,6 +51,6 @@ This involves changes you'd have to make in your Frappe Apps to make them compat
 * [[Migrating to Version 14]]
 
 #### Support
-* [Discuss](https://discuss.frappe.io)
+* [Discuss](https://discuss.erpnext.com)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/frappe)
