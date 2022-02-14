@@ -1,3 +1,5 @@
+WARN: This guide isn't actively maintained, use official documentation instead: https://frappeframework.com/docs/v13/user/en/installation 
+
 > From Zero to Hero
 >
 > [Achilles Rasquinha](https://github.com/achillesrasquinha) <[achilles@frappe.io](mailto:achilles@frappe.io)>, [Ameya Shenoy](https://github.com/codingCoffee) <[ameya@frappe.io](mailto:ameya@frappe.io)>
