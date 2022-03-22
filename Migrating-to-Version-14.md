@@ -223,3 +223,16 @@ Combine this based on onboarding, charts, shortcuts, or links in the page to get
 ```diff
 +  "content": "[{\"type\": \"header\", \"data\": {\"text\": \"Your Shortcuts\", \"level\": 4, \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"DocType\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Workspace\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Report\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"Elements\", \"level\": 4, \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Modules\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Models\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Views\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Scripting\", \"col\": 4}}]",
 ```
+
+---
+
+## return value of `frappe.db.exists`
+
+`frappe.db.exists` now only returns value of `name` if any were found, else `None`. Previously when passing document dictionary a list of documents were retrieved. If you relied on this behaviour, consider replacing `exists` with `get_all`.
+
+New signature of `db.exists`:
+
+```python
+def exists("DocType", "docname or filters", cache=False) -> str | None:
+    ...
+```
