@@ -233,6 +233,14 @@ Combine this based on onboarding, charts, shortcuts, or links in the page to get
 New signature of `db.exists`:
 
 ```python
-def exists("DocType", "docname or filters", cache=False) -> str | None:
+def exists(dt: str | dict, dn: str | dict | list = None, cache: bool = False) -> str | None:
     ...
 ```
+
+- `dt` can be of type
+    - `str`: the name of a doctype
+    - `dict`: filters in the standard frappe syntax. Filters have to include the `"doctype"` key. When passing filters, all other parameters will have no effect and can be left empty.
+- `dn` is needed only if `dt` was passed as a string. It can be of type:
+    - `str`: name of one specific document. Use this if you want to check if a document with this name exists.
+    - `dict` or `list`: filters in the standard frappe syntax. Use this to check if a document matching the filter values exists.
+- `cache` only works if `dt` and `dn` are both strings. In this case we cache the result, if `cache` is set to `True`.
