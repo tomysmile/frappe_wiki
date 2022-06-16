@@ -31,7 +31,6 @@ To install frappe right from scratch, check out our exhaustive guides:
 We are following the below schedules for current releases.
 
 <pre>
-<b>Version 11</b>          3rd Wednesday of every 2 months
 <b>Version 12</b>          3rd Thursday of every 2 months
 <b>Version 13</b>          3rd Thursday of every month
 </pre>
