@@ -313,3 +313,5 @@ As you can see, the value passed in fruits is 'Apple' instead of the list we pas
 ### Data Migration Tool Deprecated
 
 If you are one of the 2 people who is using the Data Migration Tool for syncing data between an external service and a Frappe site, you need to write your own syncing code because Data Migration Tool is removed from Version 14.
+
+If you absolutely want to use the tool, you can pick up the code from the [older version](https://github.com/frappe/frappe/pull/17134) and move it into an app and use that instead.
