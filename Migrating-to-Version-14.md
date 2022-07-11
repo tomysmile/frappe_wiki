@@ -109,6 +109,12 @@ bench build --app my_app
 
 Finally, you can delete the `build.json` file, you no longer need it.
 
+#### Bundling Target
+
+Version 14 now targets ES2017 aka ES8 by default. So if you use any modern JS syntax like optional chaining in your bundled javascript then it will be automatically transpiled to support previous versions. This lets developers use modern syntax without having to worry about browser compatibility. 
+
+Read more here: https://github.com/frappe/frappe/pull/16491 
+
 ### Website routing and rendering refactor
 
 There was [a major refractor](https://github.com/frappe/frappe/pull/12334) done for website routing and rendering. During this refactor, few methods were moved to different files. You might have to change the following code in your custom app.
