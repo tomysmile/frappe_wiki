@@ -277,3 +277,8 @@ unittest-xml-reporting = "~=3.0.4"
 ```
 
 These development dependencies are installed by default in developer mode. They can also be manually installed by using `bench setup requirements --dev`
+
+### Change in `frappe.get_cached_value` behaviour
+
+`get_cached_value` uses `get_cached_doc` internally which used to raise `DoesNotExistError` if document wasn't found. Since this behavior was inconsistent with other database APIs like `frappe.db.get_value` the behavior was changed to return `None` instead of raising an exception. 
+
