@@ -282,6 +282,10 @@ These development dependencies are installed by default in developer mode. They 
 
 `get_cached_value` uses `get_cached_doc` internally which used to raise `DoesNotExistError` if document wasn't found. Since this behavior was inconsistent with other database APIs like `frappe.db.get_value` the behavior was changed to return `None` instead of raising an exception. 
 
+### Changes to `Document.get`
+
+`key` is now a mandatory parameter when using `doc.get`, it no longer returns the the internal `__dict__` if `key` is not passed. This is to avoid hard to trace bugs and maintain consistency with how `dict.get` works.
+
 ### Behaviour of array values passed in a request
 
 PR: https://github.com/frappe/frappe/pull/15784
