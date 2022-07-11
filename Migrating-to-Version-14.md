@@ -310,3 +310,6 @@ def buy_fruits(fruits):
 
 As you can see, the value passed in fruits is 'Apple' instead of the list we passed. This is weird and incorrect behavior but is now fixed in Version 14. If you relied on this behavior, you need to make changes on your client-side API calls or server-side whitelisted methods based on your use case.
 
+### Data Migration Tool Deprecated
+
+If you are one of the 2 people who is using the Data Migration Tool for syncing data between an external service and a Frappe site, you need to write your own syncing code because Data Migration Tool is removed from Version 14.
