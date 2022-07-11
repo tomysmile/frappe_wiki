@@ -250,3 +250,16 @@ def exists(dt: str | dict, dn: str | dict | list = None, cache: bool = False) ->
     - `str`: name of one specific document. Use this if you want to check if a document with this name exists.
     - `dict` or `list`: filters in the standard frappe syntax. Use this to check if a document matching the filter values exists.
 - `cache` only works if `dt` and `dn` are both strings. In this case we cache the result, if `cache` is set to `True`.
+
+
+
+### Using video player
+
+Frappe's video player is now asynchronously loaded on demand. So if you're using `frappe.Plyr` you need to first load the required libraries using utility function like this.
+
+```javascript
+frappe.utils.load_video_player().then(() => {
+    plyr = new frappe.Plyr(...);
+})
+```
+
