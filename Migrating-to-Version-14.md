@@ -263,3 +263,17 @@ frappe.utils.load_video_player().then(() => {
 })
 ```
 
+### Defining developer dependencies
+
+In v14 and Frappe bench 5.12, dependencies that are only used during development are specificied in separate section in `pyproject.toml` section. Example of Frappe Framework's own developer dependencies. 
+
+```toml
+# pyproject.toml
+[tool.bench.dev-dependencies]
+coverage = "~=6.4.1"
+Faker = "~=13.12.1"
+pyngrok = "~=5.0.5"
+unittest-xml-reporting = "~=3.0.4"
+```
+
+These development dependencies are installed by default in developer mode. They can also be manually installed by using `bench setup requirements --dev`
