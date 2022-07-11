@@ -282,3 +282,31 @@ These development dependencies are installed by default in developer mode. They 
 
 `get_cached_value` uses `get_cached_doc` internally which used to raise `DoesNotExistError` if document wasn't found. Since this behavior was inconsistent with other database APIs like `frappe.db.get_value` the behavior was changed to return `None` instead of raising an exception. 
 
+### Behaviour of array values passed in a request
+
+PR: https://github.com/frappe/frappe/pull/15784
+
+Consider the following API call from a browser client:
+```js
+fetch('/api/method/app.api.buy_fruits', {
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    fruits: ['Apple', 'Orange']
+  })
+})
+```
+
+**api.py**
+```py
+
+@frappe.whitelist()
+def buy_fruits(fruits):
+  print(fruits) # 'Apple' instead of ['Apple', 'Orange']
+```
+
+As you can see, the value passed in fruits is 'Apple' instead of the list we passed. This is weird and incorrect behavior but is now fixed in Version 14. If you relied on this behavior, you need to make changes on your client-side API calls or server-side whitelisted methods based on your use case.
+
