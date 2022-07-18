@@ -341,3 +341,10 @@ If you did not specify keyword argument manually, you don't need to change anyti
 + frappe.log_error(message="Some message", title="error title")
 ```
 
+
+### Removal of standard fields - parent, parenttype and parentfield
+
+These three fields are removed from non-child doctypes. These fields were never used on non-child doctypes. If your code directly accesses three fields you might need to check if the doctype is child type first. Alternatively, you can use `doc.get` to safely check and get value if it exists. 
+
+
+
