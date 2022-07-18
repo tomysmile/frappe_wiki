@@ -319,3 +319,25 @@ As you can see, the value passed in fruits is 'Apple' instead of the list we pas
 If you are one of the 2 people who is using the Data Migration Tool for syncing data between an external service and a Frappe site, you need to write your own syncing code because Data Migration Tool is removed from Version 14.
 
 If you absolutely want to use the tool, you can pick up the code from the [older version](https://github.com/frappe/frappe/pull/17134) and move it into an app and use that instead.
+
+
+
+### Change of arguments on `frappe.log_error`
+
+log_error now supports two more parameters to link errors to a particular document. 
+
+To simplify error logging this function's signature was changed to flip order of `title` and message`.
+
+```python
+def log_error(title=None, message=None, reference_doctype=None, reference_name=None):
+    ...
+```
+
+
+If you did not specify keyword argument manually, you don't need to change anyting. If you have specified `title` explicitly and not specified `message` then you should update function call as per new signature. Example:
+
+```diff
+- frappe.log_error("Some message", title="error title")
++ frappe.log_error(message="Some message", title="error title")
+```
+
