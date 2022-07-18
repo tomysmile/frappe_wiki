@@ -347,4 +347,10 @@ If you did not specify keyword argument manually, you don't need to change anyti
 These three fields are removed from non-child doctypes. These fields were never used on non-child doctypes. If your code directly accesses three fields you might need to check if the doctype is child type first. Alternatively, you can use `doc.get` to safely check and get value if it exists. 
 
 
+### Change in the package build system
+
+Frappe and ERPNext are now built using a single `pyproject.toml` file specifying all the dependencies, development dependencies etc. This build system replaces old `setup.py` and `requirements.txt`
+
+Read more about this on the PR: https://github.com/frappe/frappe/pull/17174
+
 
