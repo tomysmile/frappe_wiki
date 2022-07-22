@@ -354,3 +354,8 @@ Frappe and ERPNext are now built using a single `pyproject.toml` file specifying
 Read more about this on the PR: https://github.com/frappe/frappe/pull/17174
 
 
+###  Breaking change in Virtual DocType interface
+
+Virtual doctypes need to implement a certain set of methods on doctype controller so it can use other data sources as backend. Version 14 improves this interface requirement by converting few object methods to static methods like `get_list` and `get_count`. 
+
+You can read more about the changed requirements and a practical example on the documentation page: https://frappeframework.com/docs/v14/user/en/basics/doctypes/virtual-doctype 
