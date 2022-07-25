@@ -359,3 +359,21 @@ Read more about this on the PR: https://github.com/frappe/frappe/pull/17174
 Virtual doctypes need to implement a certain set of methods on doctype controller so it can use other data sources as backend. Version 14 improves this interface requirement by converting few object methods to static methods like `get_list` and `get_count`. 
 
 You can read more about the changed requirements and a practical example on the documentation page: https://frappeframework.com/docs/v14/user/en/basics/doctypes/virtual-doctype 
+
+
+### Rating field value
+
+
+Rating fields used to show value from 0 to 5 start before. Number of stars are now made configurable. This however also means that the storage underlying value needs to be changed to reflect the actual number of starts. Now Rating fields store a decimal number between 0 and 1 representing the rating out of the specified number of stars.
+
+
+| Stars | Previous Value | New Value
+| --- | --- | --- |
+| `* * * * *` | 5 |  1.0 | 
+| `* * * * .` | 4 | 0.8 |
+| `. . . . .` | 0 | 0.0 |
+| `* * * * * * * * . .` | Not possible | 0.8 |
+
+
+If you performed any arithmetic operations on the rating field values you need to change the code to consider normalized values. 
+
