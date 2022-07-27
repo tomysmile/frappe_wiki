@@ -379,7 +379,7 @@ If you performed any arithmetic operations on the rating field values you need t
 
 ## Dependencies
 
-We have removed following library from the codebase in version 14. If you used these library in your apps, please add them manually in you app.
+We have removed following libraries from the codebase in version 14. If you have used these library in your app, please add them manually for your app.
 
 **Javascript**
 
