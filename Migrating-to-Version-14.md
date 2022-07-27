@@ -375,5 +375,32 @@ Rating fields used to show value from 0 to 5 start before. Number of stars are n
 | `* * * * * * * * . .` | Not possible | 0.8 |
 
 
-If you performed any arithmetic operations on the rating field values you need to change the code to consider normalized values. 
+If you performed any arithmetic operations on the rating field values you need to change the code to consider normalized values.
+
+## Dependencies
+
+We have removed following library from the codebase in version 14. If you used these library in your apps, please add them manually in you app.
+
+**Javascript**
+
+- fluxify
+- bootstrap.js (v3)
+- jquery.hotkeys.js
+- prettyDate.js
+- bootstrap_theme
+- express
+- fuse.js
+- hyper.js
+
+**Python**
+
+- html2text
+- md5
+
+**Icons**
+
+- glyphicons
+
+We have also removed local copy **sockect.io** & **sortableJS** and used these libraries that are pulled from package managers. So you might have to update the path of these libraries in your application.
+
 
