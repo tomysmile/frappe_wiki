@@ -396,6 +396,10 @@ We have removed following libraries from the codebase in version 14. If you have
 
 - html2text
 - md5
+- paytmchecksum
+- razorpay
+- stripe
+- braintree
 
 **Icons**
 
@@ -408,4 +412,6 @@ We have removed following libraries from the codebase in version 14. If you have
 
 We have also removed local copy **sockect.io** & **sortableJS** and used these libraries that are pulled from package managers. So you might have to update the path of these libraries in your application.
 
+## Separation(s)
 
+We have moved all the payment gateways (Braintree, Stripe, PayPal, PayTM, Razorpay - along with Payment Gateway DocType) as well as it's dependencies from frappe to a separate app [payments](https://github.com/frappe/payments).
