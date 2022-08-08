@@ -414,4 +414,9 @@ We have also removed local copy **sockect.io** & **sortableJS** and used these l
 
 ## Separation(s)
 
-We have moved all the payment gateways (Braintree, Stripe, PayPal, PayTM, Razorpay - along with Payment Gateway DocType) as well as it's dependencies from frappe to a separate app [payments](https://github.com/frappe/payments).
+We have moved all the payment gateways (Braintree, Stripe, PayPal, PayTM, Razorpay - along with Payment Gateway DocType) as well as it's dependencies from frappe to a separate app [payments](https://github.com/frappe/payments). To install this app, run following commands:
+
+```sh
+$ bench get-app payments
+$ bench --site <your-site-name> install-app payments
+```
