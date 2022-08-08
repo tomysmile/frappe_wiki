@@ -5,9 +5,12 @@
    </a>
 </div>
 
-<p align="justify">
-<b>frappe</b> is an Open Sourced high-level Web Application Framework (licensed under the <a href="https://github.com/frappe/frappe/blob/develop/LICENSE">MIT License</a>) built on top of Python's Werkzurg Server, Jinja 2 for templating and JavaScript for everything awesome. You can build pretty much everything using frappe for rapid application development so that you can focus on building products without reinventing wheels!
-</p>
+Frappe - Low Code Open Source Framework in Python and JS.
+
+Frappe, pronounced fra-pay, is a full stack, batteries-included, web
+framework written in Python and Javascript with MariaDB as the database.
+It is the framework which powers ERPNext. It is pretty generic and can
+be used to build database driven apps.
 
 ### Table of Contents
 * [Installation](#installation)
@@ -26,21 +29,12 @@ To install frappe right from scratch, check out our exhaustive guides:
 * [[The Hitchhiker's Guide to Installing Frappe on Windows OS]] (Windows Subsystem for Linux)
 * [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]] (deprecated)
 
-#### Release Schedule
+#### Supported versions
 
-We are following the below schedules for current releases.
+- Version 13 (security & bug fixes)
+- Version 14 (security, bug fixes & minor features)
+- develop (new features)
 
-<pre>
-<b>Version 12</b>          3rd Thursday of every 2 months
-<b>Version 13</b>          3rd Thursday of every month
-</pre>
-
-**Note:** Fixes for critical issues will be released out of the schedule. 
-
-The **pre-release** branch will be made 10 days before the release date for 
-each version and testing will be done on that pre-release branch. 
-Any fixes based on testing should go into both
-pre-release and hotfix/develop branches via separate pull requests.
 
 #### Migration Guide
 
