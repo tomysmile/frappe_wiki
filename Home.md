@@ -1,16 +1,14 @@
 <div align="center">
    <a href="https://frappe.io">
       <h1>Frappe</h1>
-      <h4>a batteries included web framework</h4>
+      <h4>Low Code Open Source Framework in Python and JS</h4>
    </a>
 </div>
 
-Frappe - Low Code Open Source Framework in Python and JS.
-
 Frappe, pronounced fra-pay, is a full stack, batteries-included, web
-framework written in Python and Javascript with MariaDB as the database.
-It is the framework which powers ERPNext. It is pretty generic and can
-be used to build database driven apps.
+framework written in Python and Javascript with MariaDB (or Postgres) as the database.
+It is the framework which powers [ERPNext](//erpnext.com). It is pretty generic and can
+be used to build database-driven apps.
 
 ### Table of Contents
 * [Installation](#installation)
