@@ -14,7 +14,6 @@ be used to build database-driven apps.
 * [Installation](#installation)
 * [Contribution Guidelines](https://github.com/frappe/erpnext/wiki/Contribution-Guidelines)
 * [API Reference](https://frappeframework.com/docs/user/en/api)
-* [Release Schedule](#release-schedule)
 * [Migration Guide](#migration-guide)
 * [Support](#support)
 
