@@ -3,7 +3,7 @@
 </div>
 
 * [[Home]]
-* [Installation](https://github.com/frappe/frappe/wiki#installation)
+* [Installation](https://frappeframework.com/docs/v14/user/en/installation)
 
 ### Support
 * [Discuss](https://discuss.erpnext.com/c/developers)
