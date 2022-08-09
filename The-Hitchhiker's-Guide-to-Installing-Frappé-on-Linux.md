@@ -1,1 +1,0 @@
-Moved to https://github.com/frappe/frappe/wiki/The-Hitchhiker%27s-Guide-to-Installing-Frappe-on-Linux
