@@ -21,11 +21,7 @@ be used to build database-driven apps.
 
 #### Installation
 
-To install frappe right from scratch, check out our exhaustive guides:
-* [[Installing Frappe ERPNext on MacOS]]
-* [[The Hitchhiker's Guide to Installing Frappe on Linux]]
-* [[The Hitchhiker's Guide to Installing Frappe on Windows OS]] (Windows Subsystem for Linux)
-* [[The Hitchhiker's Guide to Installing Frappe on Mac OS X]] (deprecated)
+To install frappe right from scratch, check [official documentation](https://frappeframework.com/docs/v14/user/en/installation).
 
 #### Supported versions
 
