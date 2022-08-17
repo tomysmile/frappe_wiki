@@ -410,7 +410,7 @@ We have removed following libraries from the codebase in version 14. If you have
 + /assets/frappe/css/fonts/fontawesome/font-awesome.min.css # use minified version
 ```
 
-We have also removed local copy **sockect.io** & **sortableJS** and used these libraries that are pulled from package managers. So you might have to update the path of these libraries in your application.
+We have also removed local copy of **sockect.io** & **sortableJS** and used these libraries that are pulled from package managers. So you might have to update the path of these libraries in your application.
 
 ## Separation(s)
 
