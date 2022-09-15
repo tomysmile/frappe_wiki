@@ -16,3 +16,10 @@ Browsers now support the lazy loading of images natively. If you were using Fram
 
 - `get_year_ending` used to return string date instead of `datetime.date`. This behavior is now made consistent with other utilities.
 - `get_timespan_date_range` used to return string date tuples for some cases, now it always returns `datetime.date` tuples.
+
+
+### No default index on `modified` field in child tables
+
+Frappe v15 will drop the default index on `modified` field because it was seldomly used. 
+
+If your queries require an index on the `modified` field you should selectively add it on your doctypes. 
