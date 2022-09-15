@@ -23,3 +23,20 @@ Browsers now support the lazy loading of images natively. If you were using Fram
 Frappe v15 will drop the default index on `modified` field because it was seldomly used. 
 
 If your queries require an index on the `modified` field you should selectively add it on your doctypes. 
+
+
+### Dropped python dependencies
+
+We drop dependencies which aren't used anymore. This means if you were indirectly importing them in your app they will start breaking. 
+
+Following python dependencies are removed:
+
+- `googlemaps`
+- `urllib3`
+- `gitdb`
+- `pyasn1`
+- `pypng`
+- `google-auth-httplib2`
+
+
+As a good practice, always pin dependencies you heavily depend on in your apps. 
