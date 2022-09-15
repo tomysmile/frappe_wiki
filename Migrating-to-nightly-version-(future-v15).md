@@ -20,7 +20,7 @@ Browsers now support the lazy loading of images natively. If you were using Fram
 
 ### No default index on `modified` field in child tables
 
-Frappe v15 will drop the default index on `modified` field because it was seldomly used. 
+Frappe v15 will drop the default index on `modified` field because it was rarely used. 
 
 If your queries require an index on the `modified` field you should selectively add it on your doctypes. 
 
