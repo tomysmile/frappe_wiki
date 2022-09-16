@@ -37,6 +37,7 @@ Following python dependencies are removed:
 - `pyasn1`
 - `pypng`
 - `google-auth-httplib2`
+- `pyOpenSSL`
 
 
 As a good practice, always pin dependencies you heavily depend on in your apps. 
