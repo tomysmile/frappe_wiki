@@ -25,16 +25,6 @@ Frappe v15 will drop the default index on `modified` field because it was rarely
 If your queries require an index on the `modified` field you should selectively add it on your doctypes. 
 
 
-### `update_modified` behaviour in `doc.db_set` and `frappe.db.set_value`
-
-Until version 14 `doc.db_set` or `frappe.db.set_value` used to update `modified` timestamp by default. This behaviour is now disabled by default.
-
-If you need to update modified timestamp, you have to pass argument explicitly. Example:
-
-```python
-frappe.db.set_value("Item", "book", "is_stock_item", 1, update_modified=True)
-```
-
 ### Dropped python dependencies
 
 We drop dependencies which aren't used anymore. This means if you were indirectly importing them in your app they will start breaking. 
