@@ -42,3 +42,9 @@ Following python dependencies are removed:
 
 As a good practice, always pin dependencies you heavily depend on in your apps. 
 
+### Migrate to vue3
+
+If your custom app is using `vue 2`, `vuex 3`, `vue-router 2` and `vuedraggable 2.24.3` you will have to migrate the code to support `vue 3`, `vuex 4.0.2`, `vue-router 4.1.5` and `vuedraggable 4.1.0`
+
+I have mentioned some points that will help you migrate check description of PR [#18247](https://github.com/frappe/frappe/pull/18247)
+
