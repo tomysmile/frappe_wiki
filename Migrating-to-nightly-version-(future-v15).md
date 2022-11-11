@@ -49,3 +49,17 @@ If your custom app is using `vue 2`, `vuex 3`, `vue-router 2` or `vuedraggable 2
 
 I have mentioned some points that will help you migrate check the description of PR [#18247](https://github.com/frappe/frappe/pull/18247)
 
+
+
+### Removed database methods
+
+Following unused functionality/methods are removed from `frappe.db`. 
+
+- `db.sql` - `as_utf8` parameters is not supported anymore.
+- `db.sql` - `formatted` parameter is not supported anymore.
+- `db.set_value` - `for_update` parameter is not removed and not required anymore as updates happen in single query.
+- `db.set` - Use `doc.db_set` instead.
+- `db.touch` - This method is removed.
+- `db.clear_table` - Use `db.truncate` instead
+- `db.update` - Use `db.set_value` instead
+- `db.set_temp` & `db.get_temp` - These methods are removed
