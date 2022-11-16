@@ -22,7 +22,7 @@ sudo rm -fr /var/lib/mysql/lost+found
 Update Ubuntu
 
 ```shell
-sudo apt update && sudo apt dist-upgrade -y
+sudo apt update && sudo apt dist-upgrade -y && sudo dpkg-reconfigure --priority=low unattended-upgrades
 ```
 
 Install MariaDB Server
