@@ -63,3 +63,11 @@ Following unused functionality/methods are removed from `frappe.db`.
 - `db.clear_table` - Use `db.truncate` instead
 - `db.update` - Use `db.set_value` instead
 - `db.set_temp` & `db.get_temp` - These methods are removed
+
+### Validate from and to dates
+
+With `doc.validate_from_to_dates(from_date_field: str, to_date_field: str)` you can validate that the date value of one field is before the date value of another field.
+
+Previously, if either date was missing, we compared the other field with the current date. For example, if `from_date` was not set, but `to_date` was, then we validated that `to_date` was in the future and threw an error if not.
+
+Now, if either date field is empty, we don't validate anything.
