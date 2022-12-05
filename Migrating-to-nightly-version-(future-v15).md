@@ -74,4 +74,6 @@ Now, if either date field is empty, we don't validate anything.
 
 ### Deprecated support for `device` in HTTP sessions
 
-Since support for Cordova was dropped a long time ago, there's no need to differentiate between "mobile" and "desktop" sessions anymore. Consequently, the PR [#18729](https://github.com/frappe/frappe/pull/18729) drops support for this from the internal Sessions API. In other words, specifying a `device` argument as `mobile` when logging into your Frappe site will not have any special treatment anymore.
+Since support for Cordova was dropped before a few major releases, there's no need to differentiate between `mobile` and `desktop` sessions anymore. Consequently, the PR [#18729](https://github.com/frappe/frappe/pull/18729) drops support for this from the internal Sessions API. In other words, specifying the `device` parameter as `mobile` when logging into your Frappe site will not be treated differently anymore.
+
+Additionally, the system setting for **Session Expiry Mobile** has now been removed.
