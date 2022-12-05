@@ -71,3 +71,7 @@ With `doc.validate_from_to_dates(from_date_field: str, to_date_field: str)` you 
 Previously, if either date was missing, we compared the other field with the current date. For example, if `from_date` was not set, but `to_date` was, then we validated that `to_date` was in the future and threw an error if not.
 
 Now, if either date field is empty, we don't validate anything.
+
+### Deprecated support for `device` in HTTP sessions
+
+Since support for Cordova was dropped a long time ago, there's no need to differentiate between "mobile" and "desktop" sessions anymore. Consequently, the PR [#18729](https://github.com/frappe/frappe/pull/18729) drops support for this from the internal Sessions API. In other words, specifying a `device` argument as `mobile` when logging into your Frappe site will not have any special treatment anymore.
