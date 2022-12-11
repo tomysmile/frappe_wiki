@@ -77,3 +77,13 @@ Now, if either date field is empty, we don't validate anything.
 Since support for Cordova was dropped before a few major releases, there's no need to differentiate between `mobile` and `desktop` sessions anymore. Consequently, the PR [#18729](https://github.com/frappe/frappe/pull/18729) drops support for this from the internal Sessions API. In other words, specifying the `device` parameter as `mobile` when logging into your Frappe site will not be treated differently anymore.
 
 Additionally, the system setting for **Session Expiry Mobile** has now been removed.
+
+### Import `compare` from utils
+
+Previously, you were able to use `frappe.compare(val1, operator, val2)`. Now you'll have to import `compare` from `frappe.utils` to use it:
+
+```python
+from frappe.utils import compare
+
+compare(val1, operator, val2)
+```
