@@ -87,3 +87,12 @@ from frappe.utils import compare
 
 compare(val1, operator, val2)
 ```
+
+### Setting single value using db.set_value is deprecated 
+
+`db.set_value` can set single value if doctype and docname are same or docname is `None`. This behaviour is error prone and hence we have deprecated this. Use the explicit API for setting single values instead. 
+
+```diff
+- frappe.db.set_value("Single Doctype", None, "field", "value")
++ frappe.db.set_single_value("Single Doctype", "field", "value")
+```
