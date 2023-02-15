@@ -101,3 +101,12 @@ compare(val1, operator, val2)
 - frappe.db.set_value("Single Doctype", "Single Doctype", "field", "value")
 + frappe.db.set_single_value("Single Doctype", "field", "value")
 ```
+
+### Access to local scope by client scripts is no longer supported
+
+You can no longer access local variables like `this` in your client scripts. This usage was never intended.
+
+Further reading:
+- [Example of unsupported usage](https://github.com/frappe/frappe/blob/94398aab0ebf850ec6a418346af4b4e4434715fc/frappe/email/doctype/notification/notification.js#L4:L12)
+- [Pull Request](https://github.com/frappe/frappe/pull/19882)
+- [MDN Article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_eval!)
