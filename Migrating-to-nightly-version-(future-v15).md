@@ -110,3 +110,14 @@ Further reading:
 - [Example of unsupported usage](https://github.com/frappe/frappe/blob/94398aab0ebf850ec6a418346af4b4e4434715fc/frappe/email/doctype/notification/notification.js#L4:L12)
 - [Pull Request](https://github.com/frappe/frappe/pull/19882)
 - [MDN Article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval#never_use_eval!)
+
+
+### Renamed timezone utils
+
+```diff
+- from frappe.utils.data import convert_utc_to_user_timezone, get_time_zone
++ from frappe.utils.data import convert_utc_to_system_timezone, get_system_timezone
+```
+
+- [Deprecation PR](https://github.com/frappe/frappe/pull/20253)
+- [Removal PR](https://github.com/frappe/frappe/pull/20255)
