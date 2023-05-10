@@ -121,3 +121,23 @@ Further reading:
 
 - [Deprecation PR](https://github.com/frappe/frappe/pull/20253)
 - [Removal PR](https://github.com/frappe/frappe/pull/20255)
+
+
+### Deprecation of `job_name` parameter in `frappe.enqueue`
+
+To deduplicate jobs Frappe now uses RQ Job's `job_id` parameter, if you were using `job_name` to identify if duplicate job exists you should change code to use `job_id` instead.
+
+```diff
+- from frappe.core.page.background_jobs.background_jobs import get_info
+
+- enqueued_jobs = [d.get("job_name") for d in get_info()]
+- if self.name not in enqueued_jobs:
+- 	enqueue(..., job_name=self.name)
+
+
++ from frappe.utils.background_jobs import enqueue, is_job_enqueued
+
++ job_id = f"data_import::{self.name}"
++ if not is_job_enqueued(job_id):
++ 	enqueue(..., job_id=job_id)
+```
