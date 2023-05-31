@@ -141,3 +141,14 @@ To deduplicate jobs Frappe now uses RQ Job's `job_id` parameter, if you were usi
 + if not is_job_enqueued(job_id):
 + 	enqueue(..., job_id=job_id)
 ```
+
+
+### `frappe.new_doc` arguments
+
+`frappe.new_doc` now supports passing field values as kwargs, this change however introduces a breaking behaviour for previous keyword-args - `parent_doc`, `parentfield` and `as_dict`, if you were using any of them positionally you need to use them as keyword-arguments only. 
+
+
+```diff
+- doc = frappe.new_doc(doctype, parent_doc, parentfield, False)
++ doc = frappe.new_doc(doctype, parent_doc=parent_doc, parentfield=parentfield, as_dict=False)
+```
