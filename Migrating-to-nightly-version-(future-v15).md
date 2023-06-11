@@ -162,3 +162,8 @@ The following functionality is removed:
 
 
 You can use new DB transaction hooks instead: https://frappeframework.com/docs/v14/user/en/api/database#database-transaction-hooks 
+
+
+### `redis_queue` and `redis_socketio` are merged
+
+- Redis Queue instance is now also used as `socket.io` backend. You don't need to make any changes in code unless you were explicitly using redis_socketio instance for doing something else. 
