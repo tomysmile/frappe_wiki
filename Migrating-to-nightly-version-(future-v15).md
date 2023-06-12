@@ -167,3 +167,15 @@ You can use new DB transaction hooks instead: https://frappeframework.com/docs/v
 ### `redis_queue` and `redis_socketio` are merged
 
 - Redis Queue instance is now also used as `socket.io` backend. You don't need to make any changes in code unless you were explicitly using redis_socketio instance for doing something else. 
+
+
+### Updated dependencies.
+
+A lot of Frappe's pythona and JS dependencies are updated, if you were transitively relying on any of them then you need to ensure that any of the breaking changes in those dependencies doesn't affect you. You can check `pyproject.toml` and `package.json` file to find full list of dependencies. 
+
+
+### Removal of `setup.py`
+
+Frappe now only uses `pyproject.toml` to build python package. You need to update bench to latest version in order to install version-15 of Frappe. 
+
+
