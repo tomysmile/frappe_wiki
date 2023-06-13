@@ -197,3 +197,28 @@ refer: https://frappeframework.com/docs/v14/user/en/guides/app-development/how-t
 ### `bench build` doesn't support `--make_copy` and `--restore`
 
 Both of these flags were deprecated before and replaced with `--hard-link`. The behaviour is kept the same. 
+
+
+### `window` globals removed
+
+In very old versions of Frappe we exposed some functionality via `window` object. This is not a good practice hence they were deprecated since long time. Most such globals are now removed. 
+
+
+| window global | replacement |
+| ---           | ---         |
+| `get_today` | `frappe.datetime.get_today` |
+| `date`, `dateutil` | `frappe.datetime` |
+| `show_alert` | `frappe.show_alert` |
+| `validated` | `frappe.validated` |
+| `user` | `frappe.sesion.user` |
+| `user_fullname` | `frappe.session.user_fullname` |
+| `user_email` | `frappe.session.user_email` |
+| `user_defaults` | `frappe.user_defaults` |
+| `roles` | `frappe.user_roles` | 
+| `sys_defaults` | `frappe.sys_defaults` |
+| `frappe.query_report_filters_by_name` |  `frappe.query_report.get_filter_value(fieldname)` and `frappe.query_report.set_filter_value(fieldname, value)` |
+| 
+
+
+
+
