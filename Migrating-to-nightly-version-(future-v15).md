@@ -179,3 +179,10 @@ A lot of Frappe's pythona and JS dependencies are updated, if you were transitiv
 Frappe now only uses `pyproject.toml` to build python package. You need to update bench to latest version in order to install version-15 of Frappe. 
 
 
+### Removal of custom script import from `/fixtures/custom_scipts`
+
+This old feature allowed syncing one custom script per doctype from apps, since we now allow multiple client scripts for each doctype, this feature is misleading and behaves incorrectly. 
+
+Instead of storing scripts in `/fixtures/custom_scripts` we recommend using fixtures directly which can sync client scripts like any other documents. 
+
+refer: https://frappeframework.com/docs/v14/user/en/guides/app-development/how-to-create-custom-fields-during-app-installation 
