@@ -37,7 +37,6 @@ Following python dependencies are removed:
 - `pyasn1`
 - `pypng`
 - `google-auth-httplib2`
-- `pyOpenSSL`
 - `schedule`
 
 
@@ -90,7 +89,7 @@ compare(val1, operator, val2)
 
 ### Setting Single DocType value using `db.set_value` is not supported 
 
-`db.set_value` was able to set single value if doctype and docname are same or docname is `None`. This behaviour is error prone and hence we have deprecated this. Use the explicit API for setting single values instead. 
+`db.set_value` was able to set single value if doctype and docname are same or docname is `None`. This behaviour is error prone and hence we have remove this. Use the explicit API for setting single values instead. 
 
 ```diff
 // Using None
