@@ -217,7 +217,6 @@ In very old versions of Frappe we exposed some functionality via `window` object
 | `roles` | `frappe.user_roles` | 
 | `sys_defaults` | `frappe.sys_defaults` |
 | `frappe.query_report_filters_by_name` |  `frappe.query_report.get_filter_value(fieldname)` and `frappe.query_report.set_filter_value(fieldname, value)` |
-| 
 
 
 
