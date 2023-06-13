@@ -186,3 +186,9 @@ This old feature allowed syncing one custom script per doctype from apps, since 
 Instead of storing scripts in `/fixtures/custom_scripts` we recommend using fixtures directly which can sync client scripts like any other documents. 
 
 refer: https://frappeframework.com/docs/v14/user/en/guides/app-development/how-to-create-custom-fields-during-app-installation 
+
+
+### `frappe.get_installed_apps` doesn't support any arguments now
+
+
+`frappe.get_installed_apps` had two arguments `sort` and `frappe_last`. Both are not useful since we changed the app hook resolution order.
