@@ -192,3 +192,8 @@ refer: https://frappeframework.com/docs/v14/user/en/guides/app-development/how-t
 
 
 `frappe.get_installed_apps` had two arguments `sort` and `frappe_last`. Both are not useful since we changed the app hook resolution order.
+
+
+### `bench build` doesn't support `--make_copy` and `--restore`
+
+Both of these flags were deprecated before and replaced with `--hard-link`. The behaviour is kept the same. 
