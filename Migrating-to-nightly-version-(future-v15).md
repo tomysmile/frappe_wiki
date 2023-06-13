@@ -56,7 +56,7 @@ Following unused functionality/methods are removed from `frappe.db`.
 
 - `db.sql` - `as_utf8` parameters is not supported anymore.
 - `db.sql` - `formatted` parameter is not supported anymore.
-- `db.set_value` - `for_update` parameter is not removed and not required anymore as updates happen in single query.
+- `db.set_value` - `for_update` parameter is now removed and not required anymore as updates happen in single query.
 - `db.set` - Use `doc.db_set` instead.
 - `db.touch` - This method is removed.
 - `db.clear_table` - Use `db.truncate` instead
