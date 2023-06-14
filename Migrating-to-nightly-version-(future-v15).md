@@ -170,7 +170,7 @@ You can use new DB transaction hooks instead: https://frappeframework.com/docs/v
 
 ### Updated dependencies.
 
-A lot of Frappe's pythona and JS dependencies are updated, if you were transitively relying on any of them then you need to ensure that any of the breaking changes in those dependencies doesn't affect you. You can check `pyproject.toml` and `package.json` file to find full list of dependencies. 
+A lot of Frappe's python and JS dependencies are updated, if you were transitively relying on any of them then you need to ensure that any of the breaking changes in those dependencies doesn't affect you. You can check `pyproject.toml` and `package.json` file to find full list of dependencies. 
 
 
 ### Removal of `setup.py`
