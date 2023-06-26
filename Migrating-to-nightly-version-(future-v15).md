@@ -168,6 +168,15 @@ You can use new DB transaction hooks instead: https://frappeframework.com/docs/v
 - Redis Queue instance is now also used as `socket.io` backend. You don't need to make any changes in code unless you were explicitly using redis_socketio instance for doing something else. 
 
 
+### Minimum required node version is v18
+
+In develop (v15), minimum required node version has been updated [from v14 to v18](https://github.com/frappe/frappe/pull/21370). You might face following error during build process
+```
+error frappe-framework@: The engine "node" is incompatible with this module. Expected version ">=18". Got "14.18.2"
+```
+you just need to [update your node version to v18](https://stackoverflow.com/a/10076029) to resolve the issue. You also might have to update few libraries in your custom app to make it compatible with node v18.
+
+
 ### Updated dependencies.
 
 A lot of Frappe's python and JS dependencies are updated, if you were transitively relying on any of them then you need to ensure that any of the breaking changes in those dependencies doesn't affect you. You can check `pyproject.toml` and `package.json` file to find full list of dependencies. 
