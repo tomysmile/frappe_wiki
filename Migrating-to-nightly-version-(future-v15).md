@@ -254,3 +254,13 @@ SocketIO client on website now by default doesn't establish a connection. The co
 - `frappe.realtime.emit`
 
 Note: This change doesn't affect desk (`/app`) usage of socketio client. 
+
+
+### `currentsite.txt` is not supported for setting the default site.
+
+Alternatives:
+
+- Use `bench use sitename`, it will set the `default_site` value in `common_site_config.json`.
+- Use `FRAPPE_SITE=sitename` environment variable. 
+
+
