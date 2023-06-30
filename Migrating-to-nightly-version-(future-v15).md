@@ -232,3 +232,25 @@ In very old versions of Frappe we exposed some functionality via `window` object
 `Error Log` doctype provides sufficient and equivalent information as Error Snapshot DocType hence this DocType is removed. 
 
 Note: Frappe Framework logs all 5xx errors by default. 
+
+
+### SocketIO namespacing
+
+v15 improves multitenancy feature of realtime features by using SocketIO namespaces. Namespaces are site names which is name of site folder and also accessible via `frappe.local.site` server side. 
+
+If you were using Frappe's SocketIO client you don't need to change anything. If you were using a custom client you need to change the initialization of the client like this.
+
+```diff
+- let socket = io(url, { withCredentials: true })
++ let socket = io(`${url}/${frappe.local.site}`, { withCredentials: true })
+```
+
+
+### Lazy connections on SocketIO client on website
+
+SocketIO client on website now by default doesn't establish a connection. The connection is only established when first call is made to any of these APIs:
+- `frappe.realtime.on`
+- `frappe.realtime.connect`
+- `frappe.realtime.emit`
+
+Note: This change doesn't affect desk (`/app`) usage of socketio client. 
