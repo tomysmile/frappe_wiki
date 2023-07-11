@@ -264,3 +264,13 @@ Alternatives:
 - Use `FRAPPE_SITE=sitename` environment variable. 
 
 
+### Event cancelled state
+
+`Event` doctype had "Cancelled" as `event_type`. However, "Cancelled" makes more sense as status of event, hence this was moved to `status` field. 
+
+If you were filtering cancelled events in code, you'll have to make changes accordingly
+
+```diff
++ frappe.get_all("Events", {"event_type": "Cancelled"})
+- frappe.get_all("Events", {"status": "Cancelled"})
+```
