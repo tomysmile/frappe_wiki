@@ -271,6 +271,6 @@ Alternatives:
 If you were filtering cancelled events in code, you'll have to make changes accordingly
 
 ```diff
-+ frappe.get_all("Events", {"event_type": "Cancelled"})
-- frappe.get_all("Events", {"status": "Cancelled"})
+- frappe.get_all("Events", {"event_type": "Cancelled"})
++ frappe.get_all("Events", {"status": "Cancelled"})
 ```
