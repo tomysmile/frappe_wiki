@@ -274,3 +274,23 @@ If you were filtering cancelled events in code, you'll have to make changes acco
 - frappe.get_all("Events", {"event_type": "Cancelled"})
 + frappe.get_all("Events", {"status": "Cancelled"})
 ```
+
+
+### Safe exec restrictions 
+
+Frappe v15 disables server scripts by default to strengthen the security of the system. This means following features will not work by default:
+
+- Server Scripts (all kinds)
+- Web page with Python context scripts
+- Custom script report that use Python script for generating report. 
+- System Console (python)
+
+Server scripts can ONLY be enabled at the bench level. You can enable it using the following command:
+
+```bash
+bench set-config -g server_script_enabled 1
+```
+
+If you're on cloud hosting provider like Frappe Cloud:
+
+- You need to be the owner of a private bench to enable the server script. Update the configuration from UI.
