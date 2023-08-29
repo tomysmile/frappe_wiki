@@ -294,3 +294,13 @@ bench set-config -g server_script_enabled 1
 If you're on cloud hosting provider like Frappe Cloud:
 
 - You need to be the owner of a private bench to enable the server script. Update the configuration from UI.
+
+
+
+### New restrictive catch-all role `Desk User`
+
+Frappe Framework provided a catchall role called "All" that was allocated to all users on the system. Frappe v15 adds a new catch-all role that's similar in nature but only allocated to Desk/System user i.e. excludes Website User. 
+Lots of core doctypes now have more restrictive permissions to strengthen security. If you require relaxed permission for any doctype, you can reconfigure it from "Role Permission Manager" on your site. 
+
+
+ 
