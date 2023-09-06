@@ -38,6 +38,7 @@ Following python dependencies are removed:
 - `pypng`
 - `google-auth-httplib2`
 - `schedule`
+- `pycryptodome`
 
 
 As a good practice, always pin dependencies you heavily depend on in your apps. 
