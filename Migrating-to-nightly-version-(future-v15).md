@@ -305,4 +305,8 @@ Frappe Framework provided a catchall role called "All" that was allocated to all
 Lots of core doctypes now have more restrictive permissions to strengthen security. If you require relaxed permission for any doctype, you can reconfigure it from "Role Permission Manager" on your site. 
 
 
+### No on_trash hook for oauth internal documents
+
+Expired and invalid `OAuth Authorization Code` and `OAuth Bearer Token` are deleted without running any hooks now. 
  
+ref: https://github.com/frappe/frappe/pull/22538
