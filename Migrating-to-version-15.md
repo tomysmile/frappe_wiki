@@ -310,3 +310,27 @@ Lots of core doctypes now have more restrictive permissions to strengthen securi
 Expired and invalid `OAuth Authorization Code` and `OAuth Bearer Token` are deleted without running any hooks now. 
  
 ref: https://github.com/frappe/frappe/pull/22538
+
+
+### search_link and search_widget response type
+
+`search_link` and `search_widget` are two function used to search link fields. These functions returned response in non-standard response keys which is now standardized. 
+
+If you used these function custom UI you might have to make the following change. 
+
+```diff
+- frappe.call({
+-    method: "frappe.desk.search.search_link",
+-        callback(r) {
+-            resolve(r.results);
+-        },
+- });
++ frappe.call({
++    method: "frappe.desk.search.search_link",
++        callback(r) {
++            // notice the response key change. `message` is standard key for all responses
++            resolve(r.message); 
++        },
++ });
+
+```
