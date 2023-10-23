@@ -24,9 +24,7 @@ To install frappe right from scratch, check [official documentation](https://fra
 
 #### Supported versions
 
-- Version 13 (security & bug fixes)
-- Version 14 (security, bug fixes & minor features)
-- develop (new features)
+Refer https://github.com/frappe/erpnext/wiki/Supported-Versions
 
 
 #### Migration Guide
