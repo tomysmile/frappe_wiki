@@ -34,6 +34,8 @@ This involves changes you'd have to make in your Frappe Apps to make them compat
 * [[Migrating to Version 13]]
 * [[Migrating to Version 14]]
 * [[Migrating to version 15]]
+* [[Migrating to nightly version]]
+
 #### Support
 * [Discuss](https://discuss.erpnext.com)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
