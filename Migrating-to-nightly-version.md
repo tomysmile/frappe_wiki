@@ -8,6 +8,6 @@ In the previous versions it was possible to add translations for a specific view
 
 Along with this change we also included the following changes:
 
-- Currency codes and timezone names no longer get translated. (This used to be the case in **Setup Wizard** and **System Settings**.)
+- Currency codes and timezone names no longer get translated. (This used to be the case in **Setup Wizard** and **System Settings** only.)
 - Translations of country names are be available everywhere by default. 
 - The method `frappe.geo.country_info.get_translated_dict` is deprecated and only returns translations of country names. Use `get_translated_countries` instead.
