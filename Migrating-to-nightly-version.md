@@ -16,5 +16,5 @@ Along with this change we also included the following changes:
 - The methods `frappe.get_lang_dict`, `frappe.translate.get_dict`, `frappe.translate.get_lang_js` and `frappe.translate.get_dict_from_hooks` have been removed. Translations are available via `_()`.
 - `doc.meta.__messages` does no longer hold doc-specific translations
 - `frappe.translate.get_dict` has been removed.
- 
 
+https://github.com/frappe/frappe/pull/22962
