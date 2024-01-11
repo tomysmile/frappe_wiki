@@ -17,3 +17,9 @@ Along with this change we also included the following changes:
 - `doc.meta.__messages` does no longer hold doc-specific translations
 
 https://github.com/frappe/frappe/pull/22962
+
+
+### Permission system breaking changes
+
+1. `has_permission` hooks now need to explicitly return True. Current behaviour allowed returning `None` or non-False value to allow user. [#24253](https://github.com/frappe/frappe/pull/24253)
+2. `frappe.permission.has_permission` function no longer expects misleading "raise_exception" parameter. [#24266](https://github.com/frappe/frappe/pull/24266)
