@@ -40,7 +40,7 @@ What do you as app developer need to do?
 - If you change sorting to `creation` then modified index will be dropped while migrating. 
 
 
-**WARNING:*** This change also affects how database APIs work. Most Frappe database APIs implicitly sorted by `modified`, they'll now implicitly sort by `creation`. 
+**WARNING:** This change also affects how database APIs work. Most Frappe database APIs implicitly sorted by `modified`, they'll now implicitly sort by `creation`. 
 
 Example: `frappe.get_all("DocType")` was actually translated to `frappe.get_all("DocType", order_by="modified desc")`. This is now changed to `frappe.get_all("DocType", order_by="creation desc")`
 
