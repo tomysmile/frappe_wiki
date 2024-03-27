@@ -23,3 +23,33 @@ https://github.com/frappe/frappe/pull/22962
 
 1. `has_permission` hooks now need to explicitly return True. Current behaviour allowed returning `None` or non-False value to allow user. [#24253](https://github.com/frappe/frappe/pull/24253)
 2. `frappe.permission.has_permission` function no longer accepts misleading "raise_exception" parameter, use `print_logs` instead. [#24266](https://github.com/frappe/frappe/pull/24266)
+
+
+### Default sorting changed from `modified` to `creation`
+
+- Starting with v16 all list views by default will be sorted by creation.
+- This decision was taken considering multiple things:
+    - `creation` is better default for most business documents (currently primary use case for many Frappe apps)
+    - `creation` ensures stable list view even when things are rapidly changing. 
+    - `creation` is better from performance point of view as the field doesn't change and hence index updates are not required. This reduces contention on index updates.
+
+
+What do you as app developer need to do?
+- Change default sort ordering in your doctype from `modified` to `creation`
+- If you don't change it then both `creation` and `modified` will be indexed. 
+- If you change sorting to `creation` then modified index will be dropped while migrating. 
+
+
+**WARNING:*** This change also affects how database APIs work. Most Frappe database APIs implicitly sorted by `modified`, they'll now implicitly sort by `creation`. 
+
+Example: `frappe.get_all("DocType")` was actually translated to `frappe.get_all("DocType", order_by="modified desc")`. This is now changed to `frappe.get_all("DocType", order_by="creation desc")`
+
+It's possible that some of your business logic dependent on this, so it's advisable to audit your code to find out if `modified` ordering affects any of your business logic and explicitly add `order_by='modified desc'`.
+
+Note: You can re-add index by adding following code in your doctype controller. 
+
+```
+def on_doctype_update():
+    frappe.db.add_index("Doctype Name", ["modified"])
+```
+
