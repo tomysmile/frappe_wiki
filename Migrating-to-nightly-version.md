@@ -35,7 +35,7 @@ https://github.com/frappe/frappe/pull/22962
 
 
 What do you as app developer need to do?
-- Change default sort ordering in your doctype from `modified` to `creation`
+- Change default sort ordering in your all of your DocType from `modified` to `creation`
 - If you don't change it then both `creation` and `modified` will be indexed. 
 - If you change sorting to `creation` then modified index will be dropped while migrating. 
 
