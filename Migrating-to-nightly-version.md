@@ -46,6 +46,12 @@ Example: `frappe.get_all("DocType")` was actually translated to `frappe.get_all(
 
 It's possible that some of your business logic dependent on this, so it's advisable to audit your code to find out if `modified` ordering affects any of your business logic and explicitly add `order_by='modified desc'`.
 
+Following APIs have changed the implicit sort order:
+
+- `frappe.get_all` / `frappe.get_list`
+- `frappe.db.get_value` / `frappe.db.get_values`
+- `frappe.qb.get_query`
+
 Note: You can re-add index by adding following code in your doctype controller. 
 
 ```
