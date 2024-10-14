@@ -40,3 +40,7 @@ This involves changes you'd have to make in your Frappe Apps to make them compat
 * [Discuss](https://discuss.erpnext.com)
 * [GitHub Issues](https://github.com/frappe/frappe/issues)
 * [Stack Overflow](https://stackoverflow.com/questions/tagged/frappe)
+
+#### Testing Guide
+* [Generating Test Records in Frappe](https://github.com/frappe/frappe/wiki/Generating-Test-Records-in-Frappe)
+* [Test Environment Startup Sequence](https://github.com/frappe/frappe/wiki/Frappe-Test-Record-Loading:-Startup-Sequence)
