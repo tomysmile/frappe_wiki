@@ -44,3 +44,4 @@ This involves changes you'd have to make in your Frappe Apps to make them compat
 #### Testing Guide
 * [Generating Test Records in Frappe](https://github.com/frappe/frappe/wiki/Generating-Test-Records-in-Frappe)
 * [Test Environment Startup Sequence](https://github.com/frappe/frappe/wiki/Frappe-Test-Record-Loading:-Startup-Sequence)
+* [Writing an Integration Test Case - Step by Step](https://github.com/frappe/frappe/wiki/Writing-an-IntegrationTestCase-in-Frappe:-A-Step%E2%80%90by%E2%80%90Step-Guide)
