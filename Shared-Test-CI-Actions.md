@@ -188,6 +188,7 @@ jobs:
     needs: checkrun  # runs only after checkrun, but runs in parallel with migrate
     env:
       FRAPPE_SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+      FRAPPE_BRANCH: ${{ github.event.client_payload.frappe_sha || github.base_ref || github.ref_name }}
 
   migrate:
     name: Migration
@@ -197,6 +198,8 @@ jobs:
       python-version: '3.10'
       node-version: 20
       fake-success: ${{ needs.checkrun.outputs.build != 'strawberry' }}
+    env:
+      FRAPPE_BRANCH: ${{ github.event.client_payload.frappe_sha || github.base_ref || github.ref_name }}
 
   coverage:  # uploads coverage data with the secret
     name: Coverage Wrap Up
@@ -216,4 +219,25 @@ jobs:
           fail_ci_if_error: true
           verbose: true
           flags: server
+  dispatch:
+    runs-on: "ubuntu-latest"
+    needs: [test, migrate]  # only if tests succeeded
+    # and only if label 'trigger-downstream-ci' is set
+    if: ${{ contains( github.event.pull_request.labels.*.name, 'trigger-downstream-ci') }}
+    strategy:
+      matrix:
+        repo:
+          # repos can subscribe by adding themselves here
+          - frappe/erpnext
+          - frappe/lending
+          - frappe/hrms
+    steps:
+      - name: Dispatch Downstream CI (if supported)
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.CI_PAT }}
+          repository: ${{ matrix.repo }}
+          event-type: frappe-framework-change
+          client-payload: '{"frappe_sha": "${{ github.sha }}"}'  # see above, frappe_sha is set as FRAPPE_BRANCH for downstream checkout
+
 ```
