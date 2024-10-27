@@ -81,7 +81,6 @@ jobs:
 ```
 
 This workflow will run UI tests using Cypress against a MariaDB database.
-Thank you for providing the updated information. I'll revise the Customization Options section to accurately reflect the available options for the shared GitHub Actions workflows.
 
 ### Customization Options
 
