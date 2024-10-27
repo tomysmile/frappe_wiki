@@ -96,7 +96,7 @@ The shared workflows offer several customization options:
 - **enable-postgres**: Set to `true` to run tests against both MariaDB and PostgreSQL (default: `false`)
 - **enable-coverage**: Enable coverage reporting (default: `false`)
 
-#### Patch Base Workflow
+#### Migration Base Workflow
 
 - **fake-success**: Set to `true` to simulate a successful run without actually executing the patch (default: `false`)
 - **python-version**: Specify the Python version to use (default: '3.10')
