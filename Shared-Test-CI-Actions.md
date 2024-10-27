@@ -185,10 +185,8 @@ jobs:
       parallel-runs: 2
       enable-coverage: ${{ github.event_name != 'pull_request' }}
       fake-success: ${{ needs.checkrun.outputs.build != 'strawberry' }}
-    needs: checkrun  # runs only after checkrun, but runs in parallel with migrate
-    env:
-      FRAPPE_SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
-      FRAPPE_BRANCH: ${{ github.event.client_payload.frappe_sha || github.base_ref || github.ref_name }}
+    needs: checkrun  # runs only after checkrun, but runs in parallel with migratek
+    secrets: inherit  # inherit secrets from the calling workflow, e.g. secrets.SENTRY_DSN
 
   migrate:
     name: Migration
@@ -198,8 +196,6 @@ jobs:
       python-version: '3.10'
       node-version: 20
       fake-success: ${{ needs.checkrun.outputs.build != 'strawberry' }}
-    env:
-      FRAPPE_BRANCH: ${{ github.event.client_payload.frappe_sha || github.base_ref || github.ref_name }}
 
   coverage:  # uploads coverage data with the secret
     name: Coverage Wrap Up
