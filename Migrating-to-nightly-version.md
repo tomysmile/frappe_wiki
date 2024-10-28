@@ -59,3 +59,6 @@ def on_doctype_update():
     frappe.db.add_index("Doctype Name", ["modified"])
 ```
 
+### Country code
+
+Until now you could add almost any data as **Country**. Now it's necessary to set the _Code_ field and we'll check that it's valid according to ISO 3166 ALPHA-2.
